@@ -1,0 +1,39 @@
+{
+  "register" : {
+    "user": {
+      "login": "Nele_22",
+      "email": "nele@mailsac.com",
+      "password": "password1234"
+    }
+  },
+
+ "session" : {
+    "user": {
+      "login": "Nele_22",
+      "password": "password1234"
+    }
+
+  },
+
+  "updateUser" :
+  {
+    "user": {
+      "login": "Nele_22",
+      "email": "nele@mailsac.com",
+      "password": "password124",
+      "twitter_username" : "tweetNele",
+      "facebook_username" : "Nele20",
+      "pic" : "facebook",
+      "profanity_filter" : "false"
+
+
+    }
+  }
+
+
+
+
+
+
+}
+

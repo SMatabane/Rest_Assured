@@ -1,0 +1,20 @@
+[2025-02-24 11:44:46] INFO  BaseTests - Base setup initialized.
+[2025-02-24 11:44:48] INFO  FiltersHelper - REQUEST METHOD: GET
+https://fakestoreapi.com/users/1
+[2025-02-24 11:44:48] INFO  FiltersHelper - Headers: Accept=*/*
+[2025-02-24 11:44:48] INFO  FiltersHelper - Body: null
+[2025-02-24 11:44:48] INFO  FiltersHelper -  SUCCESS: Request tohttps://fakestoreapi.com/users/1
+ returned200
+[2025-02-24 11:44:48] INFO  FakeApiTests - User ID: 1
+[2025-02-24 11:44:48] INFO  FakeApiTests - Username: johnd
+[2025-02-24 11:44:48] INFO  FakeApiTests - Email: john@gmail.com
+[2025-02-24 11:44:48] INFO  FakeApiTests - Adress: com.api.DTOs.GeolocationDTO@39133244
+[2025-02-24 11:44:48] INFO  FakeApiTests - ----------------------
+[2025-02-24 11:45:58] INFO  BaseTests - Base setup initialized.
+[2025-02-24 11:46:00] ERROR AuthenticationFilter - ERROR: Request failed!
+[2025-02-24 11:46:00] ERROR AuthenticationFilter - Request: POST https://fakestoreapi.com/auth/login
+[2025-02-24 11:46:00] ERROR AuthenticationFilter - Response Code: 401
+[2025-02-24 11:46:00] ERROR AuthenticationFilter - Response Body: username or password is incorrect
+[2025-02-24 11:46:00] ERROR AuthenticationFilter - -------------------------------
+[2025-02-24 11:46:01] INFO  AuthenticationFilter -  SUCCESS: Request tohttps://fakestoreapi.com/auth/login
+ returned200

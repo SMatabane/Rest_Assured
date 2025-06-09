@@ -1,0 +1,496 @@
+[2025-03-24 18:58:14] INFO  BaseTests - Starting test: sessionCreate
+[2025-03-24 18:58:14] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/user.json
+[2025-03-24 18:58:18] INFO  CustomFilters - REQUEST METHOD: POST
+https://favqs.com/api/session
+[2025-03-24 18:58:18] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+Content-Type=application/json
+[2025-03-24 18:58:18] INFO  CustomFilters - Body: {"user":{"login":"Nele_22","email":null,"password":"password1234"}}
+[2025-03-24 18:58:18] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/session
+ returned 200
+{"User-Token": "L0pvBUruBlZJmVvnAhMFpDZfarn2AkyV5EVSuFb23VnrQ8addvqnB3j8jmvWYmpkvloNM/kxGD8whT1KiLjBCA==", "login": "nele_22", "email": "nele@mailsac.com"}
+[2025-03-24 18:58:19] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 18:58:19] INFO  BaseTests - Starting test: updateUser
+[2025-03-24 18:58:19] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/user.json
+[2025-03-24 18:58:19] ERROR JsonReader - Failed to read JSON file: Cannot construct instance of `com.api.DTos.users.UpdateDTo` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: UNKNOWN; byte offset: #UNKNOWN]
+[2025-03-24 18:58:19] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 18:58:19] INFO  BaseTests - Starting test: getUsersDetailsSession
+[2025-03-24 18:58:20] INFO  CustomFilters - REQUEST METHOD: GET
+https://favqs.com/api/users/nele_22
+[2025-03-24 18:58:20] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=L0pvBUruBlZJmVvnAhMFpDZfarn2AkyV5EVSuFb23VnrQ8addvqnB3j8jmvWYmpkvloNM/kxGD8whT1KiLjBCA==
+Content-Type=application/json
+[2025-03-24 18:58:20] INFO  CustomFilters - Body: {"user":{"login":"Nele_22","email":null,"password":"password1234"}}
+[2025-03-24 18:58:20] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/users/nele_22
+ returned 200
+{"login":"nele_22","pic_url":"https://favqs.s3.amazonaws.com/avatar.png","public_favorites_count":1,"following":1,"followers":0,"pro":null,"account_details":{"email":"nele@mailsac.com","private_favorites_count":0}}
+[2025-03-24 18:58:20] INFO  UserTests - User Details: io.restassured.internal.RestAssuredResponseImpl@56d6a1b1
+[2025-03-24 18:58:21] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 18:58:21] INFO  BaseTests - Starting test: addQuotes
+[2025-03-24 18:58:21] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/quotes.json
+[2025-03-24 18:58:22] INFO  CustomFilters - REQUEST METHOD: POST
+https://favqs.com/api/quotes
+[2025-03-24 18:58:22] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=L0pvBUruBlZJmVvnAhMFpDZfarn2AkyV5EVSuFb23VnrQ8addvqnB3j8jmvWYmpkvloNM/kxGD8whT1KiLjBCA==
+User-Token=L0pvBUruBlZJmVvnAhMFpDZfarn2AkyV5EVSuFb23VnrQ8addvqnB3j8jmvWYmpkvloNM/kxGD8whT1KiLjBCA==
+Content-Type=application/json
+[2025-03-24 18:58:22] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 18:58:22] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/quotes
+ returned 200
+{"error_code": 20, "message": "No user session found."}
+[2025-03-24 18:58:22] INFO  UserTests - Test passed 200
+[2025-03-24 18:58:22] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:03:07] INFO  BaseTests - Starting test: sessionCreate
+[2025-03-24 19:03:07] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/user.json
+[2025-03-24 19:03:10] INFO  CustomFilters - REQUEST METHOD: POST
+https://favqs.com/api/session
+[2025-03-24 19:03:10] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+Content-Type=application/json
+[2025-03-24 19:03:10] INFO  CustomFilters - Body: {"user":{"login":"Nele_22","email":null,"password":"password1234"}}
+[2025-03-24 19:03:10] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/session
+ returned 200
+{"User-Token": "B/1HhNfgQK5oF4tWtjwsZklUcieQXT/j0btnXtKqs6s2PjEwNc1sB0kYUGE7b9MZw2AIdyhsAu6jvft2cINQnQ==", "login": "nele_22", "email": "nele@mailsac.com"}
+[2025-03-24 19:03:12] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:03:12] INFO  BaseTests - Starting test: updateUser
+[2025-03-24 19:03:12] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/user.json
+[2025-03-24 19:03:12] ERROR JsonReader - Failed to read JSON file: Unrecognized field "twitter_username" (class com.api.DTos.users.UserDTO), not marked as ignorable (3 known properties: "login", "password", "email"])
+ at [Source: UNKNOWN; byte offset: #UNKNOWN] (through reference chain: com.api.DTos.users.UpdateDTo["user"]->com.api.DTos.users.UserDTO["twitter_username"])
+[2025-03-24 19:03:12] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:05:04] INFO  BaseTests - Starting test: sessionCreate
+[2025-03-24 19:05:04] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/user.json
+[2025-03-24 19:05:09] INFO  CustomFilters - REQUEST METHOD: POST
+https://favqs.com/api/session
+[2025-03-24 19:05:09] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+Content-Type=application/json
+[2025-03-24 19:05:09] INFO  CustomFilters - Body: {"user":{"login":"Nele_22","email":null,"password":"password1234"}}
+[2025-03-24 19:05:09] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/session
+ returned 200
+{"User-Token": "B+xBA34TCHvISUKiQN15Tn3l7ywnxelaUjIlhKLLbczcRErK7MJv9GUPvkKKolMQovTWCYsRg/y4+jUpkwiM2Q==", "login": "nele_22", "email": "nele@mailsac.com"}
+[2025-03-24 19:05:10] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:05:10] INFO  BaseTests - Starting test: updateUser
+[2025-03-24 19:05:10] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/user.json
+[2025-03-24 19:05:13] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/users/nele_22
+[2025-03-24 19:05:13] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=B+xBA34TCHvISUKiQN15Tn3l7ywnxelaUjIlhKLLbczcRErK7MJv9GUPvkKKolMQovTWCYsRg/y4+jUpkwiM2Q==
+Content-Type=application/json
+[2025-03-24 19:05:13] INFO  CustomFilters - Body: {"twitter_username":null,"facebook_username":null,"pic":null,"profanity_filter":false}
+[2025-03-24 19:05:13] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/users/nele_22
+ returned 200
+{"message": "User successfully updated."}
+[2025-03-24 19:05:13] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:16:10] INFO  BaseTests - Starting test: sessionCreate
+[2025-03-24 19:16:10] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/user.json
+[2025-03-24 19:16:13] INFO  CustomFilters - REQUEST METHOD: POST
+https://favqs.com/api/session
+[2025-03-24 19:16:13] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+Content-Type=application/json
+[2025-03-24 19:16:13] INFO  CustomFilters - Body: {"user":{"login":"Nele_22","email":null,"password":"password1234"}}
+[2025-03-24 19:16:13] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/session
+ returned 200
+{"User-Token": "ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==", "login": "nele_22", "email": "nele@mailsac.com"}
+[2025-03-24 19:16:15] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:16:15] INFO  BaseTests - Starting test: updateUser
+[2025-03-24 19:16:15] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/user.json
+[2025-03-24 19:16:16] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/users/nele_22
+[2025-03-24 19:16:16] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+Content-Type=application/json
+[2025-03-24 19:16:16] INFO  CustomFilters - Body: {"twitter_username":null,"facebook_username":null,"pic":null,"profanity_filter":false}
+[2025-03-24 19:16:16] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/users/nele_22
+ returned 200
+{"message": "User successfully updated."}
+[2025-03-24 19:16:16] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:16:16] INFO  BaseTests - Starting test: getUsersDetailsSession
+[2025-03-24 19:16:17] INFO  CustomFilters - REQUEST METHOD: GET
+https://favqs.com/api/users/nele_22
+[2025-03-24 19:16:17] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+Content-Type=application/json
+[2025-03-24 19:16:17] INFO  CustomFilters - Body: {"twitter_username":null,"facebook_username":null,"pic":null,"profanity_filter":false}
+[2025-03-24 19:16:17] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/users/nele_22
+ returned 200
+{"error_code": 20, "message": "No user session found."}
+[2025-03-24 19:16:17] INFO  UserTests - User Details: io.restassured.internal.RestAssuredResponseImpl@d969452
+[2025-03-24 19:16:18] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:16:18] INFO  BaseTests - Starting test: addQuotes
+[2025-03-24 19:16:18] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/quotes.json
+[2025-03-24 19:16:19] INFO  CustomFilters - REQUEST METHOD: POST
+https://favqs.com/api/quotes
+[2025-03-24 19:16:19] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+Content-Type=application/json
+[2025-03-24 19:16:19] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:16:19] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/quotes
+ returned 200
+{"error_code": 20, "message": "No user session found."}
+[2025-03-24 19:16:19] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:16:19] INFO  BaseTests - Starting test: HideQuotes
+[2025-03-24 19:16:20] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/quotes/4/hide
+[2025-03-24 19:16:20] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+Content-Type=application/json
+[2025-03-24 19:16:20] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:16:20] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/quotes/4/hide
+ returned 200
+{"error_code": 20, "message": "No user session found."}
+[2025-03-24 19:16:20] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:16:20] INFO  BaseTests - Starting test: FavouriteQuotes
+[2025-03-24 19:16:21] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/quotes/35/fav
+[2025-03-24 19:16:21] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+Content-Type=application/json
+[2025-03-24 19:16:21] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:16:21] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/quotes/35/fav
+ returned 200
+{"error_code": 20, "message": "No user session found."}
+[2025-03-24 19:16:21] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:16:21] INFO  BaseTests - Starting test: getActivity
+[2025-03-24 19:16:23] INFO  CustomFilters - REQUEST METHOD: GET
+https://favqs.com/api/activities
+[2025-03-24 19:16:23] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+Content-Type=application/json
+[2025-03-24 19:16:23] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:16:23] ERROR CustomFilters - ERROR: Request failed!
+[2025-03-24 19:16:23] ERROR CustomFilters - Request: GET https://favqs.com/api/activities
+[2025-03-24 19:16:23] ERROR CustomFilters - Response Code: 404
+[2025-03-24 19:16:23] ERROR CustomFilters - Response Body: {"error_code": 20, "message": "User session not found."}
+[2025-03-24 19:16:23] ERROR CustomFilters - -------------------------------
+[2025-03-24 19:16:23] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:16:23] INFO  BaseTests - Starting test: Follow
+[2025-03-24 19:16:24] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/activities/follow/?filter=gose&type=user
+[2025-03-24 19:16:24] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+Content-Type=application/json
+[2025-03-24 19:16:24] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:16:24] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/activities/follow/?filter=gose&type=user
+ returned 200
+{"error_code": 20, "message": "No user session found."}
+[2025-03-24 19:16:24] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:16:24] INFO  BaseTests - Starting test: UNFollow
+[2025-03-24 19:16:25] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/activities/follow/?filter=gose&filter=gose&type=user&type=user
+[2025-03-24 19:16:25] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+Content-Type=application/json
+[2025-03-24 19:16:25] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:16:25] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/activities/follow/?filter=gose&filter=gose&type=user&type=user
+ returned 200
+{"error_code": 20, "message": "No user session found."}
+[2025-03-24 19:16:25] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:16:25] INFO  BaseTests - Starting test: destroySession
+[2025-03-24 19:16:27] INFO  CustomFilters - REQUEST METHOD: DELETE
+https://favqs.com/api/session?filter=gose&filter=gose&type=user&type=user
+[2025-03-24 19:16:27] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+User-Token=ecXMMJsr7j5v3xMIRXoancJpssC7rbsNDnu7Qa9mCePr1xkhcsJgDejseRJDua7OdBIIRVu9nHDCo5gcbp9bEw==
+Content-Type=application/json
+[2025-03-24 19:16:27] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:16:27] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/session?filter=gose&filter=gose&type=user&type=user
+ returned 200
+{"error_code": 20, "message": "No user session found."}
+[2025-03-24 19:16:27] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:30:25] INFO  BaseTests - Starting test: sessionCreate
+[2025-03-24 19:30:25] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/user.json
+[2025-03-24 19:30:29] INFO  CustomFilters - REQUEST METHOD: POST
+https://favqs.com/api/session
+[2025-03-24 19:30:29] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+Content-Type=application/json
+[2025-03-24 19:30:29] INFO  CustomFilters - Body: {"user":{"login":"Nele_22","email":null,"password":"password1234"}}
+[2025-03-24 19:30:29] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/session
+ returned 200
+{"User-Token": "ilQkJGy7i5hd71wAV7n/CJ8+iWcktEaBc+C7vcCLULuUxCIEOyYg3rT+B6DgU77pDZLP7K4WyhwzRoM1jPdbbA==", "login": "nele_22", "email": "nele@mailsac.com"}
+[2025-03-24 19:30:30] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:30:30] INFO  BaseTests - Starting test: updateUser
+[2025-03-24 19:30:30] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/user.json
+[2025-03-24 19:30:32] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/users/nele_22
+[2025-03-24 19:30:32] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ilQkJGy7i5hd71wAV7n/CJ8+iWcktEaBc+C7vcCLULuUxCIEOyYg3rT+B6DgU77pDZLP7K4WyhwzRoM1jPdbbA==
+Content-Type=application/json
+[2025-03-24 19:30:32] INFO  CustomFilters - Body: {"twitter_username":null,"facebook_username":null,"pic":null,"profanity_filter":false}
+[2025-03-24 19:30:32] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/users/nele_22
+ returned 200
+{"message": "User successfully updated."}
+[2025-03-24 19:30:32] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:30:32] INFO  BaseTests - Starting test: getUsersDetailsSession
+[2025-03-24 19:30:33] INFO  CustomFilters - REQUEST METHOD: GET
+https://favqs.com/api/users/nele_22
+[2025-03-24 19:30:33] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ilQkJGy7i5hd71wAV7n/CJ8+iWcktEaBc+C7vcCLULuUxCIEOyYg3rT+B6DgU77pDZLP7K4WyhwzRoM1jPdbbA==
+Content-Type=application/json
+[2025-03-24 19:30:33] INFO  CustomFilters - Body: {"twitter_username":null,"facebook_username":null,"pic":null,"profanity_filter":false}
+[2025-03-24 19:30:33] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/users/nele_22
+ returned 200
+{"login":"nele_22","pic_url":"https://favqs.s3.amazonaws.com/avatar.png","public_favorites_count":1,"following":1,"followers":0,"pro":null,"account_details":{"email":"nele@mailsac.com","private_favorites_count":0}}
+[2025-03-24 19:30:33] INFO  UserTests - User Details: io.restassured.internal.RestAssuredResponseImpl@ca546a1
+[2025-03-24 19:30:33] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:30:33] INFO  BaseTests - Starting test: addQuotes
+[2025-03-24 19:30:33] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/quotes.json
+[2025-03-24 19:30:34] INFO  CustomFilters - REQUEST METHOD: POST
+https://favqs.com/api/quotes
+[2025-03-24 19:30:34] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ilQkJGy7i5hd71wAV7n/CJ8+iWcktEaBc+C7vcCLULuUxCIEOyYg3rT+B6DgU77pDZLP7K4WyhwzRoM1jPdbbA==
+Content-Type=application/json
+[2025-03-24 19:30:34] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:30:34] ERROR CustomFilters - ERROR: Request failed!
+[2025-03-24 19:30:34] ERROR CustomFilters - Request: POST https://favqs.com/api/quotes
+[2025-03-24 19:30:34] ERROR CustomFilters - Response Code: 400
+[2025-03-24 19:30:34] ERROR CustomFilters - Response Body: {"status":400,"error":"Bad Request"}
+[2025-03-24 19:30:34] ERROR CustomFilters - -------------------------------
+[2025-03-24 19:30:35] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:30:35] INFO  BaseTests - Starting test: HideQuotes
+[2025-03-24 19:30:36] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/quotes/4/hide
+[2025-03-24 19:30:36] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ilQkJGy7i5hd71wAV7n/CJ8+iWcktEaBc+C7vcCLULuUxCIEOyYg3rT+B6DgU77pDZLP7K4WyhwzRoM1jPdbbA==
+Content-Type=application/json
+[2025-03-24 19:30:36] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:30:36] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/quotes/4/hide
+ returned 200
+{"id":4,"dialogue":false,"private":false,"tags":["simplicity","minimalism","physicist"],"url":"https://favqs.com/quotes/anonymous/4-make-everything-a-","favorites_count":43,"upvotes_count":10,"downvotes_count":2,"author":"Anonymous","author_permalink":"anonymous","body":"Make everything as simple as possible, but not simpler.","user_details":{"favorite":false,"upvote":false,"downvote":false,"hidden":true}}
+[2025-03-24 19:30:36] INFO  UserTests - Test passed 200
+[2025-03-24 19:30:36] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:30:36] INFO  BaseTests - Starting test: FavouriteQuotes
+[2025-03-24 19:30:37] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/quotes/35/fav
+[2025-03-24 19:30:37] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ilQkJGy7i5hd71wAV7n/CJ8+iWcktEaBc+C7vcCLULuUxCIEOyYg3rT+B6DgU77pDZLP7K4WyhwzRoM1jPdbbA==
+Content-Type=application/json
+[2025-03-24 19:30:37] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:30:37] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/quotes/35/fav
+ returned 200
+{"id":35,"dialogue":false,"private":false,"tags":["destiny","american","deaf","blind"],"url":"https://favqs.com/quotes/helen-keller/35-one-can-never-co-","favorites_count":9,"upvotes_count":3,"downvotes_count":0,"author":"Helen Keller","author_permalink":"helen-keller","body":"One can never consent to creep when one feels an impulse to soar.","user_details":{"favorite":true,"upvote":false,"downvote":false,"hidden":false}}
+[2025-03-24 19:30:37] INFO  UserTests - Test passed 200
+[2025-03-24 19:30:37] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:30:37] INFO  BaseTests - Starting test: getActivity
+[2025-03-24 19:30:38] INFO  CustomFilters - REQUEST METHOD: GET
+https://favqs.com/api/activities
+[2025-03-24 19:30:38] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ilQkJGy7i5hd71wAV7n/CJ8+iWcktEaBc+C7vcCLULuUxCIEOyYg3rT+B6DgU77pDZLP7K4WyhwzRoM1jPdbbA==
+Content-Type=application/json
+[2025-03-24 19:30:38] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:30:38] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/activities
+ returned 200
+{"page":1,"last_page":true,"activities":[{"activity_id":24912,"owner_type":"User","owner_id":"nele_22","owner_value":"nele_22","action":"followed","trackable_id":"gose","trackable_type":"User","trackable_value":"gose","message":"User nele_22 followed User gose"},{"activity_id":24911,"owner_type":"User","owner_id":"nele_22","owner_value":"nele_22","action":"favorited","trackable_id":35,"trackable_type":"Quote","trackable_value":"\"One can never consent to creep when one feels an impulse to soar.\" - Helen Keller","message":"User nele_22 favorited Quote \"One can never consent to creep when one feels an impulse to soar.\" - Helen Keller"}]}
+[2025-03-24 19:30:38] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:30:38] INFO  BaseTests - Starting test: Follow
+[2025-03-24 19:30:39] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/activities/follow/?filter=gose&type=user
+[2025-03-24 19:30:39] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ilQkJGy7i5hd71wAV7n/CJ8+iWcktEaBc+C7vcCLULuUxCIEOyYg3rT+B6DgU77pDZLP7K4WyhwzRoM1jPdbbA==
+Content-Type=application/json
+[2025-03-24 19:30:39] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:30:39] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/activities/follow/?filter=gose&type=user
+ returned 200
+{"status":"ok"}
+[2025-03-24 19:30:39] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:30:39] INFO  BaseTests - Starting test: UNFollow
+[2025-03-24 19:30:41] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/activities/unfollow?filter=gose&filter=gose&type=user&type=user
+[2025-03-24 19:30:41] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ilQkJGy7i5hd71wAV7n/CJ8+iWcktEaBc+C7vcCLULuUxCIEOyYg3rT+B6DgU77pDZLP7K4WyhwzRoM1jPdbbA==
+Content-Type=application/json
+[2025-03-24 19:30:41] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:30:41] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/activities/unfollow?filter=gose&filter=gose&type=user&type=user
+ returned 200
+{"status":"ok"}
+[2025-03-24 19:30:41] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:30:41] INFO  BaseTests - Starting test: destroySession
+[2025-03-24 19:30:42] INFO  CustomFilters - REQUEST METHOD: DELETE
+https://favqs.com/api/session?filter=gose&filter=gose&type=user&type=user
+[2025-03-24 19:30:42] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=ilQkJGy7i5hd71wAV7n/CJ8+iWcktEaBc+C7vcCLULuUxCIEOyYg3rT+B6DgU77pDZLP7K4WyhwzRoM1jPdbbA==
+Content-Type=application/json
+[2025-03-24 19:30:42] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:30:42] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/session?filter=gose&filter=gose&type=user&type=user
+ returned 200
+{"message": "User logged out."}
+[2025-03-24 19:30:42] INFO  UserTests - User deleted sucecessfully: io.restassured.internal.RestAssuredResponseImpl@3b65084e
+[2025-03-24 19:30:42] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:38:00] INFO  BaseTests - Starting test: sessionCreate
+[2025-03-24 19:38:00] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/user.json
+[2025-03-24 19:38:04] INFO  CustomFilters - REQUEST METHOD: POST
+https://favqs.com/api/session
+[2025-03-24 19:38:04] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+Content-Type=application/json
+[2025-03-24 19:38:04] INFO  CustomFilters - Body: {"user":{"login":"Nele_22","email":null,"password":"password1234"}}
+[2025-03-24 19:38:04] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/session
+ returned 200
+{"User-Token": "y3id4HoXbw7vXhGJg57fpnnK6Kb3Ud0Q00wVz/sV6uoOogZloNt9fqr02o8ihYZrJGFtx8d4Ryt+9JUGHgo4SQ==", "login": "nele_22", "email": "nele@mailsac.com"}
+[2025-03-24 19:38:05] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:38:05] INFO  BaseTests - Starting test: updateUser
+[2025-03-24 19:38:05] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/user.json
+[2025-03-24 19:38:07] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/users/nele_22
+[2025-03-24 19:38:07] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=y3id4HoXbw7vXhGJg57fpnnK6Kb3Ud0Q00wVz/sV6uoOogZloNt9fqr02o8ihYZrJGFtx8d4Ryt+9JUGHgo4SQ==
+Content-Type=application/json
+[2025-03-24 19:38:07] INFO  CustomFilters - Body: {"twitter_username":null,"facebook_username":null,"pic":null,"profanity_filter":false}
+[2025-03-24 19:38:07] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/users/nele_22
+ returned 200
+{"message": "User successfully updated."}
+[2025-03-24 19:38:07] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:38:07] INFO  BaseTests - Starting test: getUsersDetailsSession
+[2025-03-24 19:38:08] INFO  CustomFilters - REQUEST METHOD: GET
+https://favqs.com/api/users/nele_22
+[2025-03-24 19:38:08] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=y3id4HoXbw7vXhGJg57fpnnK6Kb3Ud0Q00wVz/sV6uoOogZloNt9fqr02o8ihYZrJGFtx8d4Ryt+9JUGHgo4SQ==
+Content-Type=application/json
+[2025-03-24 19:38:08] INFO  CustomFilters - Body: {"twitter_username":null,"facebook_username":null,"pic":null,"profanity_filter":false}
+[2025-03-24 19:38:08] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/users/nele_22
+ returned 200
+{"login":"nele_22","pic_url":"https://favqs.s3.amazonaws.com/avatar.png","public_favorites_count":1,"following":0,"followers":0,"pro":null,"account_details":{"email":"nele@mailsac.com","private_favorites_count":0}}
+[2025-03-24 19:38:08] INFO  UserTests - User Details: io.restassured.internal.RestAssuredResponseImpl@4cecc15a
+[2025-03-24 19:38:08] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:38:08] INFO  BaseTests - Starting test: addQuotes
+[2025-03-24 19:38:08] INFO  JsonReader - Reading JSON file: src/test/resources/TestData/quotes.json
+[2025-03-24 19:38:09] INFO  CustomFilters - REQUEST METHOD: POST
+https://favqs.com/api/quotes
+[2025-03-24 19:38:09] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=y3id4HoXbw7vXhGJg57fpnnK6Kb3Ud0Q00wVz/sV6uoOogZloNt9fqr02o8ihYZrJGFtx8d4Ryt+9JUGHgo4SQ==
+Content-Type=application/json
+[2025-03-24 19:38:09] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:38:09] ERROR CustomFilters - ERROR: Request failed!
+[2025-03-24 19:38:09] ERROR CustomFilters - Request: POST https://favqs.com/api/quotes
+[2025-03-24 19:38:09] ERROR CustomFilters - Response Code: 400
+[2025-03-24 19:38:09] ERROR CustomFilters - Response Body: {"status":400,"error":"Bad Request"}
+[2025-03-24 19:38:09] ERROR CustomFilters - -------------------------------
+[2025-03-24 19:38:09] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:38:09] INFO  BaseTests - Starting test: HideQuotes
+[2025-03-24 19:38:10] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/quotes/4/hide
+[2025-03-24 19:38:10] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=y3id4HoXbw7vXhGJg57fpnnK6Kb3Ud0Q00wVz/sV6uoOogZloNt9fqr02o8ihYZrJGFtx8d4Ryt+9JUGHgo4SQ==
+Content-Type=application/json
+[2025-03-24 19:38:10] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:38:10] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/quotes/4/hide
+ returned 200
+{"id":4,"dialogue":false,"private":false,"tags":["simplicity","minimalism","physicist"],"url":"https://favqs.com/quotes/anonymous/4-make-everything-a-","favorites_count":43,"upvotes_count":10,"downvotes_count":2,"author":"Anonymous","author_permalink":"anonymous","body":"Make everything as simple as possible, but not simpler.","user_details":{"favorite":false,"upvote":false,"downvote":false,"hidden":true}}
+[2025-03-24 19:38:10] INFO  UserTests - Test passed 200
+[2025-03-24 19:38:10] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:38:10] INFO  BaseTests - Starting test: FavouriteQuotes
+[2025-03-24 19:38:11] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/quotes/35/fav
+[2025-03-24 19:38:11] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=y3id4HoXbw7vXhGJg57fpnnK6Kb3Ud0Q00wVz/sV6uoOogZloNt9fqr02o8ihYZrJGFtx8d4Ryt+9JUGHgo4SQ==
+Content-Type=application/json
+[2025-03-24 19:38:11] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:38:11] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/quotes/35/fav
+ returned 200
+{"id":35,"dialogue":false,"private":false,"tags":["destiny","american","deaf","blind"],"url":"https://favqs.com/quotes/helen-keller/35-one-can-never-co-","favorites_count":9,"upvotes_count":3,"downvotes_count":0,"author":"Helen Keller","author_permalink":"helen-keller","body":"One can never consent to creep when one feels an impulse to soar.","user_details":{"favorite":true,"upvote":false,"downvote":false,"hidden":false}}
+[2025-03-24 19:38:11] INFO  UserTests - Test passed 200
+[2025-03-24 19:38:11] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:38:11] INFO  BaseTests - Starting test: getActivity
+[2025-03-24 19:38:12] INFO  CustomFilters - REQUEST METHOD: GET
+https://favqs.com/api/activities
+[2025-03-24 19:38:12] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=y3id4HoXbw7vXhGJg57fpnnK6Kb3Ud0Q00wVz/sV6uoOogZloNt9fqr02o8ihYZrJGFtx8d4Ryt+9JUGHgo4SQ==
+Content-Type=application/json
+[2025-03-24 19:38:12] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:38:12] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/activities
+ returned 200
+{"page":1,"last_page":true,"activities":[{"activity_id":24913,"owner_type":"User","owner_id":"nele_22","owner_value":"nele_22","action":"unfollowed","trackable_id":"gose","trackable_type":"User","trackable_value":"gose","message":"User nele_22 unfollowed User gose"},{"activity_id":24912,"owner_type":"User","owner_id":"nele_22","owner_value":"nele_22","action":"followed","trackable_id":"gose","trackable_type":"User","trackable_value":"gose","message":"User nele_22 followed User gose"},{"activity_id":24911,"owner_type":"User","owner_id":"nele_22","owner_value":"nele_22","action":"favorited","trackable_id":35,"trackable_type":"Quote","trackable_value":"\"One can never consent to creep when one feels an impulse to soar.\" - Helen Keller","message":"User nele_22 favorited Quote \"One can never consent to creep when one feels an impulse to soar.\" - Helen Keller"}]}
+[2025-03-24 19:38:13] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:38:13] INFO  BaseTests - Starting test: Follow
+[2025-03-24 19:38:14] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/activities/follow/?filter=gose&type=user
+[2025-03-24 19:38:14] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=y3id4HoXbw7vXhGJg57fpnnK6Kb3Ud0Q00wVz/sV6uoOogZloNt9fqr02o8ihYZrJGFtx8d4Ryt+9JUGHgo4SQ==
+Content-Type=application/json
+[2025-03-24 19:38:14] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:38:14] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/activities/follow/?filter=gose&type=user
+ returned 200
+{"status":"ok"}
+[2025-03-24 19:38:14] INFO  UserTests - Unfollowed user successfully
+[2025-03-24 19:38:14] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:38:14] INFO  BaseTests - Starting test: UNFollow
+[2025-03-24 19:38:15] INFO  CustomFilters - REQUEST METHOD: PUT
+https://favqs.com/api/activities/unfollow?filter=gose&filter=gose&type=user&type=user
+[2025-03-24 19:38:15] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=y3id4HoXbw7vXhGJg57fpnnK6Kb3Ud0Q00wVz/sV6uoOogZloNt9fqr02o8ihYZrJGFtx8d4Ryt+9JUGHgo4SQ==
+Content-Type=application/json
+[2025-03-24 19:38:15] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:38:15] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/activities/unfollow?filter=gose&filter=gose&type=user&type=user
+ returned 200
+{"status":"ok"}
+[2025-03-24 19:38:15] INFO  UserTests - Unfollowed user successfully
+[2025-03-24 19:38:15] INFO  BaseTests - Test execution completed, Extent Report generated.
+[2025-03-24 19:38:15] INFO  BaseTests - Starting test: destroySession
+[2025-03-24 19:38:16] INFO  CustomFilters - REQUEST METHOD: DELETE
+https://favqs.com/api/session?filter=gose&filter=gose&type=user&type=user
+[2025-03-24 19:38:16] INFO  CustomFilters - Headers: Authorization=Token token=fc119882be8d6f11d873497e1a058de1
+Accept=*/*
+User-Token=y3id4HoXbw7vXhGJg57fpnnK6Kb3Ud0Q00wVz/sV6uoOogZloNt9fqr02o8ihYZrJGFtx8d4Ryt+9JUGHgo4SQ==
+Content-Type=application/json
+[2025-03-24 19:38:16] INFO  CustomFilters - Body: {"q":null}
+[2025-03-24 19:38:16] INFO  CustomFilters -  SUCCESS: Request tohttps://favqs.com/api/session?filter=gose&filter=gose&type=user&type=user
+ returned 200
+{"message": "User logged out."}
+[2025-03-24 19:38:16] INFO  UserTests - User deleted sucecessfully: io.restassured.internal.RestAssuredResponseImpl@60f9dc7e
+[2025-03-24 19:38:16] INFO  BaseTests - Test execution completed, Extent Report generated.

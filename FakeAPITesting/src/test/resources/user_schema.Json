@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "username": {
+      "type": "string",
+      "minLength": 3
+    },
+    "password": {
+      "type": "string",
+      "minLength": 6
+    },
+    "name": {
+      "type": "object",
+      "properties": {
+        "firstname": {
+          "type": "string"
+        },
+        "lastname": {
+          "type": "string"
+        }
+      },
+      "required": ["firstname", "lastname"]
+    },
+    "address": {
+      "type": "object",
+      "properties": {
+        "city": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        },
+        "number": {
+          "type": "integer"
+        },
+        "zipcode": {
+          "type": "string",
+          "pattern": "^\\d{5}(-\\d{4})?$"
+        },
+        "geolocation": {
+          "type": "object",
+          "properties": {
+            "lat": {
+              "type": "string",
+              "pattern": "^-?\\d+(\\.\\d+)?$"
+            },
+            "long": {
+              "type": "string",
+              "pattern": "^-?\\d+(\\.\\d+)?$"
+            }
+          },
+          "required": ["lat", "long"]
+        }
+      },
+      "required": ["city", "street", "number", "zipcode", "geolocation"]
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^\\d{1,4}-\\d{3}-\\d{3}-\\d{4}$"
+    }
+  },
+  "required": ["id", "email", "username", "password", "name", "address", "phone"]
+}
