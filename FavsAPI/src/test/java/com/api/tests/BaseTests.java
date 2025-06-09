@@ -41,7 +41,6 @@ public class BaseTests {
 
     @BeforeClass
     public void setup() {
-        RestAssured.baseURI = "https://your-api-base-url.com"; // Replace with your actual base URL
         request = RestAssured.given()
                 .filter(new CustomFilters())
                 .baseUri("https://favqs.com/api/")
