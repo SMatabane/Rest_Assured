@@ -1,0 +1,55 @@
+{
+  "user": [
+    {
+      "type": "valid",
+      "userName": "Muzzi",
+      "password": ""
+    },
+    {
+      "type": "invalid",
+      "userName": "Muzzi",
+      "password": ""
+    }
+  ],
+
+  "books" : [
+    {
+      "userId": "",
+      "collectionOfIsbns": [
+        {
+          "isbn": "9781449325862",
+          "isbn": "9781449331818",
+          "isbn": "9781449325862",
+          "isbn": "9781449337711"
+        }
+      ]
+    }
+  ],
+
+  "isbns" : [
+
+    {
+      "type": "valid",
+      "isbn" : "9781449331818"
+    },
+    {
+      "type": "invalid",
+      "isbn" : "12345"
+    }
+
+  ],
+
+  "editBook" : {
+    "userId": "",
+    "isbn": "9781593277574"
+
+  },
+
+  "deleteBook" : {
+    "isbn": "9781449325862",
+    "userId": ""
+  }
+
+
+
+}
